@@ -1,0 +1,4 @@
+localhost
+mitiendaonline
+mitiendaonline
+password_db
