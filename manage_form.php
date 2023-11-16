@@ -48,6 +48,8 @@ while ($row = $result->fetch_assoc()) {
     echo "<br>";
 
     if (password_verify($password, $pass)) {
+        session_start();
+        $_SESSION["correo"] = $mail;
         echo "<h1 style= color:green;>CONTRASEÑA CORRECTA</h1>";
         echo "<h2 style= color:black;>Inicio de sesion autorizado</h2>";
     } else {
