@@ -52,6 +52,7 @@ while ($row = $result->fetch_assoc()) {
         $_SESSION["correo"] = $mail;
         echo "<h1 style= color:green;>CONTRASEÑA CORRECTA</h1>";
         echo "<h2 style= color:black;>Inicio de sesion autorizado</h2>";
+        echo "<br><a href= 'indice.php'>Menu Principal</a>";
     } else {
         echo '<h1 style=" color:red;">CONTRASEÑA INCORRECTA</h1>';
         echo "<h2 style= color:black;>Vuelva a intentarlo</h2>";
