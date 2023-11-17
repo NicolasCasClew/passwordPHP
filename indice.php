@@ -11,7 +11,7 @@ echo "<h3> Usuario = '$_SESSION[correo]'</h3>";
 
 <ul>
     <li>
-        <a href=""></a>
+        <a href="salir.php">Cerrar sesion</a>
     </li>
     <li>
         <a href=""></a>
