@@ -41,6 +41,11 @@ $result = $mysqli->query($query);
 
 $row = $result->fetch_assoc();
 if($row != null){
+    $nombre = $row['nombre'];
+    $mail = $row['correo_electronico'];
+    $pass = $row['contrasena_hash'];
+    echo "<br>";
+
     if (password_verify($password, $pass)) {
         session_start();
         $_SESSION["correo"] = $mail;
@@ -61,11 +66,7 @@ if($row != null){
 
 //while () {
 /*
-    $nombre = $row['nombre'];
-    $mail = $row['correo_electronico'];
-    $pass = $row['contrasena_hash'];
-    echo "<br>";
-
+  
     if (password_verify($password, $pass)) {
         session_start();
         $_SESSION["correo"] = $mail;
