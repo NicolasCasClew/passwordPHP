@@ -3,6 +3,7 @@
 if (!isset($_COOKIE['login_tries'])) {
     setcookie("login_tries", 5, 2147483647);
     echo "coocke creada";
+    header("Refresh:0");
 }
 
 ?>
