@@ -39,9 +39,28 @@ WHERE correo_electronico = '$correo'";
 
 $result = $mysqli->query($query);
 
+$row = $result->fetch_assoc();
+if($row != null){
+    if (password_verify($password, $pass)) {
+        session_start();
+        $_SESSION["correo"] = $mail;
+        echo "<h1 style= color:green;>CONTRASEÑA CORRECTA</h1>";
+        echo "<h2 style= color:black;>Inicio de sesion autorizado</h2>";
+        echo "<br><a href= 'indice.php'>Menu Principal</a>";
+        //header("Location: indice.php");
+    } else {
+        echo '<h1 style=" color:red;">CONTRASEÑA INCORRECTA</h1>';
+        echo "<h2 style= color:black;>Vuelva a intentarlo</h2>";
+        echo "<a href= form.php>Volver</a>";
+    }
+}else{
+    echo '<h1 style=" color:red;">USUARIO NO ENCONTRADO</h1>';
+    echo "<h2 style= color:black;>Vuelva a intentarlo</h2>";
+    echo "<a href= form.php>Volver</a>";
+}
 
-while ($row = $result->fetch_assoc()) {
-
+//while () {
+/*
     $nombre = $row['nombre'];
     $mail = $row['correo_electronico'];
     $pass = $row['contrasena_hash'];
@@ -58,5 +77,5 @@ while ($row = $result->fetch_assoc()) {
         echo '<h1 style=" color:red;">CONTRASEÑA INCORRECTA</h1>';
         echo "<h2 style= color:black;>Vuelva a intentarlo</h2>";
         echo "<a href= form.php>Volver</a>";
-    }
-}
+    }*/
+//}
