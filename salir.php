@@ -11,3 +11,6 @@ session_destroy();
 <br>
 <a href="form.php">Login</a>
 <a></a>
+<style>
+body {background-color:#<?php echo$_COOKIE['color_fondo'];?>;}
+</style>

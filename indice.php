@@ -3,7 +3,7 @@ session_start();
 
 require("session_check.php");
 
-echo "<h3> Usuario = '$_SESSION[correo]'</h3>";
+echo "<h3> Sesión iniciada como = '$_SESSION[nombre]'</h3>";
 ?>
 
 
@@ -20,3 +20,6 @@ echo "<h3> Usuario = '$_SESSION[correo]'</h3>";
         <a href=""></a>
     </li>
 </ul>
+<style>
+body {background-color:#<?php echo$_COOKIE['color_fondo'];?>;}
+</style>

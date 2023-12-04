@@ -1,6 +1,6 @@
 <?php
 
 
-if (!isset($_SESSION["correo"])) {
+if (!isset($_SESSION["nombre"])) {
     header("Location: form.php");
 }
