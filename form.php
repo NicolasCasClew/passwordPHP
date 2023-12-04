@@ -13,7 +13,7 @@ if (!isset($_COOKIE['login_tries'])) {
 
     <input type="password" id="pass" name="pass" <?php echo isset($_COOKIE['timeOut']) ? "disabled" : "";  ?>>
     </br>
-    <input type="submit" value="Enviar">
+    <input type="submit" value="Enviar" <?php echo isset($_COOKIE['timeOut']) ? "disabled" : "";  ?>>
 </form>
 
 <h3><?php echo !isset($_COOKIE['timeOut']) ? "Tienes " . $_COOKIE['login_tries'] . "  intentos restantes" : "Castigado 3 minutos por hacer el tonto"; ?></h3>

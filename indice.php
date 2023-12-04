@@ -21,5 +21,9 @@ echo "<h3> Sesión iniciada como = '$_SESSION[nombre]'</h3>";
     </li>
 </ul>
 <style>
-body {background-color:#<?php echo$_COOKIE['color_fondo'];?>;}
+    body {
+        background-color: #<?php
+                            echo $color = (isset($_COOKIE['color_fondo'])) ?  $_COOKIE['color_fondo'] :  "ffffff";
+                            ?>
+    }
 </style>

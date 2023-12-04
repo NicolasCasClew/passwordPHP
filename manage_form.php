@@ -66,7 +66,6 @@ if ($row != null) {
 
         if ($_COOKIE['login_tries'] <= 1) {
             setcookie("timeOut", "UPS", time() + 120);
-            echo "TIMEOUT";
             setcookie("login_tries", 5, time() + 2147483647);
         } else {
             $newTries =  $_COOKIE['login_tries'] - 1;
@@ -81,6 +80,8 @@ if ($row != null) {
 ?>
 <style>
     body {
-        background-color: #<?php echo $_COOKIE['color_fondo']; ?>
+        background-color: #<?php
+                            echo $color = (isset($_COOKIE['color_fondo'])) ?  $_COOKIE['color_fondo'] :  "ffffff";
+                            ?>
     }
 </style>
