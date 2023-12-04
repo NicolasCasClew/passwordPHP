@@ -28,7 +28,8 @@ $query = "CREATE TABLE IF NOT EXISTS  `users` (
         `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY, 
         `nombre` varchar(50) NOT NULL, 
         `correo_electronico` varchar(100) NOT NULL UNIQUE KEY, 
-        `contrasena_hash` varchar(255) NOT NULL );";
+        `contrasena_hash` varchar(255) NOT NULL ),
+        `color_fondo` varchar(10) NULL;";
 
 $res = $mysqli->query($query);
 
