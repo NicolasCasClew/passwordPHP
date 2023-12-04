@@ -55,7 +55,7 @@ if ($row != null) {
 
         //Creamos la cookie para el color
         $color == "" ? $color = "808080" : null;
-        setcookie("color_fondo", $color, time() + 180);  //TODO CAMBIAR A 24 HORAS (86400 SEC)
+        setcookie("color_fondo", $color, time() + 86400);  //TODO CAMBIAR A 24 HORAS (86400 SEC)
         echo "<h2>Tu color favorito es $color</h2>";
         echo "<br><a href= 'indice.php'>Menu Principal</a>";
     } else {
